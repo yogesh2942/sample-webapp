@@ -27,6 +27,16 @@
       <name>Test Project Site</name>
       <url>file:///tmp/maven-project-site</url>
     </site>
+    <repository>
+            <id>deployment</id>
+            <name>Internal Releases</name>
+            <url>http://13.250.89.165:8081/nexus/content/repositories/webapp-war-release/</url>
+        </repository>
+        <snapshotRepository>
+            <id>deployment</id>
+            <name>Internal Snapshot Releases</name>
+            <url>http://13.250.89.165:8081/nexus/content/repositories/webapp-war/</url>
+        </snapshotRepository>       
   </distributionManagement>
 
   <build>
@@ -156,19 +166,6 @@
       </dependency>
     </dependencies>
   </dependencyManagement>
-
-<distributionManagement>
-        <repository>
-            <id>deployment</id>
-            <name>Internal Releases</name>
-            <url>http://13.250.89.165:8081/nexus/content/repositories/webapp-war-release/</url>
-        </repository>
-        <snapshotRepository>
-            <id>deployment</id>
-            <name>Internal Snapshot Releases</name>
-            <url>http://13.250.89.165:8081/nexus/content/repositories/webapp-war/</url>
-        </snapshotRepository>
-    </distributionManagement>
          
   <prerequisites>
     <maven>3.0.3</maven>
